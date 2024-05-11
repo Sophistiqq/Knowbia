@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-https://www.w3schools.com/css/css_grid_container.aspwidth, initial-scale=1.0" />
+  <!-- meta required for electron projects -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knowbia</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -23,11 +25,11 @@
 
 
     <div class="right">
-      <form action="#" id="loginForm">
+      <form id="loginForm">
         <h2>Welcome Back</h2>
         <p>Please login to your account</p>
 
-        <input type="text" autofocus name="email" placeholder="Username or Email">
+        <input type="text" autofocus name="username" placeholder="Username or Email">
         <input type="password" name="password" placeholder="Password">
         <button type="button" id="forgotPassword">Forgot password?</button>
 

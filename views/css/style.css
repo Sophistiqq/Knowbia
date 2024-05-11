@@ -54,7 +54,6 @@ body {
     margin-top: 1rem;
   }
 
-  /* make the be only visible the upper half*/
   img {
     margin-bottom: -10rem;
     z-index: 1;
@@ -77,6 +76,7 @@ body {
     gap: 1.5rem;
     padding-top: 2rem;
     padding-inline: 3rem;
+
     input {
       padding: 1rem 2rem;
       border: none;
@@ -84,6 +84,7 @@ body {
       outline: none;
       background-color: #f5f5f5;
     }
+
     #forgotPassword {
       border: none;
       background-color: transparent;
@@ -92,6 +93,7 @@ body {
       /* position itself to the right */
       align-self: flex-end;
     }
+
     h1 {
       color: var(--black-russian);
       font-size: 3rem;
@@ -101,6 +103,7 @@ body {
       color: var(--link-water);
       font-size: 1rem;
     }
+
     #loginBtn {
       padding: 1rem 2rem;
       border: none;
@@ -110,19 +113,20 @@ body {
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s;
+
       &:hover {
         background-color: #0f8ee9;
       }
     }
   }
-  
-   /* Or with lines */
+
+  /* Or with lines */
   .or {
     position: relative;
     color: var(--link-water);
     padding: 0 1rem;
     z-index: 1;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -132,6 +136,7 @@ body {
       border-top: 1px solid var(--link-water);
       z-index: -1;
     }
+
     &::after {
       content: '';
       position: absolute;
@@ -148,6 +153,7 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: center;
+
     #googleBtn {
       display: flex;
       align-items: center;
@@ -155,6 +161,15 @@ body {
       padding: 1rem 2rem;
       border: none;
       background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+
+        & img {
+          transform: scale(1.1);
+        }
+      }
+
       img {
         width: 1.5rem;
         margin-right: 1rem;
@@ -162,12 +177,38 @@ body {
     }
   }
 
-  #signupButton{
+  #signupButton {
     color: var(--link-water);
     line-height: 1.5;
     text-decoration: none;
+
     &:hover #Signup {
       text-decoration: underline;
     }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15rem;
+  padding: 2rem 1rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: var(--summer-sky);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
