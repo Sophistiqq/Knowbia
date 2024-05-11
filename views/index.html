@@ -1,83 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-https://www.w3schools.com/css/css_grid_container.aspwidth, initial-scale=1.0"
-    />
-    <title>Knowbia</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div class="login-form">
-      <div class="container">
-        <div class="main">
-          <div class="overlay-blue">
-            <h1>
-              Empower<span class="block">your coding journey</span
-              ><span class="block">with Knowbia.</span>
-            </h1>
-            <p class="sub-heading">
-              Your Personalized AI Companion for Beginner<span class="block"
-                >Programmers!</span
-              >
-            </p>
-            <img src="assets/student.png" alt="Student learning to code" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-https://www.w3schools.com/css/css_grid_container.aspwidth, initial-scale=1.0" />
+  <title>Knowbia</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-          <div class="content">
-            <h2>Welcome Back</h2>
-            <p class="subhp">Please login to your account</p>
-            <form action="#" method="post">
-              <input
-                type="text"
-                name=""
-                placeholder="Email address"
-                required
-                autofocus=""
-                class="input"
-              />
-              <input
-                type="password"
-                name=""
-                placeholder="Password"
-                required
-                autofocus=""
-                class="input"
-              />
-              <a href="forgot-password" class="gray">Forgot password?</a>
-              <button class="auth-btn" type="submit">Login</button>
-              <div class="box">
-                <div class="line"></div>
-                 <p id="or">OR</p>
-                 <div class="line duplicate-line"></div>
-              </div>
-        
-       <div>
-        <button class="google-button">
+<body>
+  <div class="container">
+
+    <div class="left">
+      <div class="texts">
+        <h1>Empower <br> your coding journey <br> with Knowbia</h1>
+        <p>Your AI Platform</p>
+      </div>
+      <img src="assets/student.png" alt="Student learning to code" />
+    </div> <!-- left -->
+
+
+
+    <div class="right">
+      <form action="#" id="loginForm">
+        <h2>Welcome Back</h2>
+        <p>Please login to your account</p>
+
+        <input type="text" autofocus name="email" placeholder="Username or Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="button" id="forgotPassword">Forgot password?</button>
+
+        <button type="submit" id="loginBtn">Login</button>
+      </form>
+
+      <p class="or">Or</p>
+
+      <div class="social">
+        <button type="button" id="googleBtn">
           <img src="assets/google.png" alt="Google Logo" />
           Continue with Google
         </button>
-                <p class="gray register">
-                  Don't have an account? <a href="register.html">Register</a>
-                  <div>
-                  
-                </div>
-                </p>
-              </div>
-              </div>
-             <div>
-       
-             </div>
-     
-            </div>
-            </form>
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
-  </body>
+
+      <a href="register.html" id="signupButton">
+        <p>Don't have an account?</p>
+        <p id="Signup">Signup here</p>
+      </a>
+    </div> <!-- right -->
+
+  </div> <!-- container -->
+</body>
+
 </html>

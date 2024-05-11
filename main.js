@@ -3,14 +3,12 @@ require('electron-reloader')(module);
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     },
   });
-
+  win.maximize();
   win.loadFile('views/index.html');
 }
 
