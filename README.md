@@ -1,4 +1,4 @@
-# Knowbia's Repository
+# QDS Repository
 
 ### Getting Started
 
