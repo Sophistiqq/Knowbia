@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 require('electron-reloader')(module);
 
 function createWindow() {
@@ -8,7 +8,10 @@ function createWindow() {
       contextIsolation: false,
     },
   });
+  Menu.setApplicationMenu(null);
   win.maximize();
+  // the minimum size of the window is 800x600
+  win.setMinimumSize(520, 600);
   win.loadFile('views/index.html');
 }
 
